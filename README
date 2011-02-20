@@ -1,0 +1,31 @@
+Pronto is a bridge between freedesktop notifications on your computer and push notifications on you iOS device.
+
+Pronto uses the Prowl API to allow you to recieve your desktop notifications on your iOS device.
+
+Pronto requires an API key for prowl which you can obtain from their website.
+
+Known Issues
+------------
+Rhythmbox sends two notifications sometimes causing two api calls.
+
+
+Getting Started
+---------------
+
+To start the daemon:
+
+python Pronto.py start
+
+To stop the daemon:
+
+python Pronto.py stop
+
+To restart the daemon:
+
+python Pronto.py restart
+
+
+Credits
+-------
+Pronto uses the Prowl API.
+The daemon functionality is from the notifylog project.
