@@ -71,7 +71,7 @@ class Pronto(Daemon):
             
             if len(method_args[3].strip()):
                 
-                application = "[Pronto] %s" % method_args[0]
+                application = method_args[0]
                 event = "%s" % method_args[3]
                 description = "%s" % strip_tags(method_args[4])
                 priority = 0 # Set to normal by default
