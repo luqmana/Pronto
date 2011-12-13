@@ -34,8 +34,10 @@ class Pronto(Daemon):
                 
         self.pyrowl = Pyrowl()
         
-        if os.path.isfile('api.key'):
-            keys = filter(None, open("api.key",'r').read().split("\n"))
+        __dir__ = os.path.dirname(os.path.abspath(__file__))
+        filepath = os.path.join(__dir__, 'api.key')
+        if os.path.isfile(filepath):
+            keys = filter(None, open(filepath,'r').read().split("\n"))
             self.pyrowl.addkey(keys)   
         else:
             print "Pronto - Send notifications to your iDevice via Prowl"
