@@ -57,7 +57,7 @@ class Pronto(Daemon):
         bus = dbus.SessionBus()
         
         # We only want notifications, filter the rest out
-        bus.add_match_string_non_blocking('interface=org.freedesktop.Notifications')
+        bus.add_match_string_non_blocking('interface=org.freedesktop.Notifications,eavesdrop=true')
         
         # Send the notifications/events to our handler
         bus.add_message_filter(self.handler)
